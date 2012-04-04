@@ -40,5 +40,5 @@ Thanks to [Mr.doob](http://github.com/mrdoob) for Three.js library.
 Thanks to [Ilmari Heikkinen](https://github.com/kig) for JSARToolKit.js library.   
 Thanks to [Jerome Etienne](https://github.com/jeromeetienne) for threex.jsartoolkit.js library.   
 
-Thanks to ro.me project for the bird 3D model.   
+Thanks to [ro.me](http://ro.me) project for the bird 3D model.   
 Thanks to [Nuno Almeida](shulapix@hotmail.com) for the frog and head 3D models.   
