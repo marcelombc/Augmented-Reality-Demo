@@ -24,6 +24,8 @@ You need to run this example with Google Chrome 18+ and enable the MediaStream f
 
 If you run this example locally, you need to run with a local server.
 
+You need to print the marker.png.
+
 
 ## License ##
 
