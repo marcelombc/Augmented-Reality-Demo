@@ -38,6 +38,12 @@
 		this.audio.pause();
 	}
 
-	glob.Audio = Audio;
+	if (typeof define == "function" && define.amd) {
+		define(function() {
+			return Audio;
+		});
+	} else {
+	    glob.Audio = Audio;
+	}
 
 }(window));

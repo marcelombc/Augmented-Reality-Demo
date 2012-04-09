@@ -38,6 +38,12 @@
 	    ajax.send(postData);
 	}
 
-	glob.Snapshot = Snapshot;
+	if (typeof define == "function" && define.amd) {
+		define(function() {
+			return Snapshot;
+		});
+	} else {
+	    glob.Snapshot = Snapshot;
+	}
 
 }(window));

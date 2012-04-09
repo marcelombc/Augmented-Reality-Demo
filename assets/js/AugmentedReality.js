@@ -291,7 +291,13 @@
 		this.renderer.render(this.videoScene, this.videoCamera);
 		this.renderer.render(this.scene, this.camera);
 	}
-	
-	glob.AugmentedReality = AugmentedReality;
+
+	if (typeof define == "function" && define.amd) {
+		define(function() {
+			return AugmentedReality;
+		});
+	} else {
+	    glob.AugmentedReality = AugmentedReality;
+	}
 
 }(window));

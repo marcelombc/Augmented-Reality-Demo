@@ -42,15 +42,25 @@
             <canvas id="snapshot_canvas" style="display:none;"></canvas>
         </div>
 
+        <script src="assets/js/require.js"></script>
+        <script type="text/javascript">
+            require.config({
+                baseUrl: "assets/js"
+            });
+            require(["JSARToolKit", "Three", "threex.jsartoolkit"], function() {
+                require(["script"]);
+            });
+        </script>
+
         <!-- JavaScript includes -->
-        <script src="assets/js/JSARToolKit.js" type="text/javascript"></script>
-        <script src="assets/js/Three.js" type="text/javascript"></script>
+        <!--<script src="assets/js/JSARToolKit.js" type="text/javascript"></script>-->
+        <!--<script src="assets/js/Three.js" type="text/javascript"></script>-->
         <!--<script src="assets/js/Stats.js" type="text/javascript"></script>-->
-        <script src="assets/js/threex.jsartoolkit.js" type="text/javascript"></script>
-        <script src="assets/js/Audio.js" type="text/javascript"></script>
-        <script src="assets/js/AugmentedReality.js" type="text/javascript"></script>
-        <script src="assets/js/Snapshot.js" type="text/javascript"></script>
-		<script src="assets/js/script.js" type="text/javascript"></script>
+        <!--<script src="assets/js/threex.jsartoolkit.js" type="text/javascript"></script>-->
+        <!--<script src="assets/js/Audio.js" type="text/javascript"></script>-->
+        <!--<script src="assets/js/AugmentedReality.js" type="text/javascript"></script>-->
+        <!--<script src="assets/js/Snapshot.js" type="text/javascript"></script>-->
+		<!--<script src="assets/js/script.js" type="text/javascript"></script>-->
 
     </body>
 </html>
