@@ -43,4 +43,9 @@ Thanks to [Ilmari Heikkinen](https://github.com/kig) for JSARToolKit.js library.
 Thanks to [Jerome Etienne](https://github.com/jeromeetienne) for threex.jsartoolkit.js library.   
 
 Thanks to [ro.me](http://ro.me) project for the bird 3D model.   
-Thanks to [Nuno Almeida](shulapix@hotmail.com) for the frog and head 3D models.   
+Thanks to [Nuno Almeida](shulapix@hotmail.com) for the frog and head 3D models.
+
+
+## Live Demo ##
+
+[live demo](http://marcelombc.github.com/Augmented-Reality-Demo/).
