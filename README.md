@@ -48,4 +48,4 @@ Thanks to [Nuno Almeida](shulapix@hotmail.com) for the frog and head 3D models.
 
 ## Live Demo ##
 
-[live demo](http://marcelombc.github.com/Augmented-Reality-Demo/).
+[https://github.com/marcelombc/Augmented-Reality-Demo](http://marcelombc.github.com/Augmented-Reality-Demo/)
