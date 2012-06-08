@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>Augmented Reality Demo</title>
+        
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/styles.css" />
+
+    </head>
+    
+    <body>
+
+        <div id="buttons_container">
+            <div class="buttons_container_wrapper">
+                <div id="model_button">Change to Bird</div>
+                <div class="button_separator">|</div>
+                <div id="snapshot_button">Take snapshot</div>
+                <div class="button_separator">|</div>
+                <div id="audio_button">Pause audio</div>
+                <div class="button_separator">|</div>
+                <div id="fullscreen_button">Go fullscreen</div>
+            </div>
+        </div>
+
+        <div id="ar_container"></div>
+
+        <footer>
+            <div class="author">
+                <div class="author_wrapper">Demo created by Marcelo Conceição</div>
+            </div>
+        </footer>
+
+        <div id="snapshot_container" style="display:none;">
+            <img id="image" src="">
+            <div id="image_buttons_container">
+                <div id="download_button">Download snapshot</div>
+                <div class="button_separator">|</div>
+                <div id="close_button">Close</div>
+            </div>
+            <canvas id="snapshot_canvas" style="display:none;"></canvas>
+        </div>
+
+        <script src="assets/js/require.js"></script>
+        <script type="text/javascript">
+            require.config({
+                baseUrl: "assets/js"
+            });
+            require(["JSARToolKit", "Three", "threex.jsartoolkit"], function() {
+                require(["script"]);
+            });
+        </script>
+
+        <!-- JavaScript includes -->
+        <!--<script src="assets/js/JSARToolKit.js" type="text/javascript"></script>-->
+        <!--<script src="assets/js/Three.js" type="text/javascript"></script>-->
+        <!--<script src="assets/js/Stats.js" type="text/javascript"></script>-->
+        <!--<script src="assets/js/threex.jsartoolkit.js" type="text/javascript"></script>-->
+        <!--<script src="assets/js/Audio.js" type="text/javascript"></script>-->
+        <!--<script src="assets/js/AugmentedReality.js" type="text/javascript"></script>-->
+        <!--<script src="assets/js/Snapshot.js" type="text/javascript"></script>-->
+		<!--<script src="assets/js/script.js" type="text/javascript"></script>-->
+
+    </body>
+</html>
+

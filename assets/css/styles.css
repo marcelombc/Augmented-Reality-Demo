@@ -1,0 +1,135 @@
+body {
+	font-family: Monospace;
+	background-image: url("../img/page/page_bg.jpg");
+	background-repeat: repeat;
+	background-color: #191919;
+	margin: 0px;
+	overflow: hidden;
+	color: #CCC;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+#ar_container canvas:-webkit-full-screen {  
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+#ar_container canvas {
+	-webkit-transform: scaleX(-1);
+}
+
+#debugCanvas {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+#ar_container {
+	position: relative;
+	left: 50%;
+	margin-left: -400px;
+	margin-top: 40px;
+}
+
+#buttons_container {
+	float: right;
+	position: relative;
+	left: -50%;
+	font-weight: bold;
+}
+
+#buttons_container .buttons_container_wrapper {
+	position: relative;
+	left: 50%;
+}
+
+.button_separator {
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#model_button,
+#snapshot_button,
+#audio_button, 
+#fullscreen_button {
+	height: 20px;
+	cursor: pointer;
+	float: left;
+	text-align: center;
+}
+
+#snapshot_container {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(76,76,76,0.8)), color-stop(100%,rgba(19,19,19,1))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(76,76,76,0.8) 0%,rgba(19,19,19,1) 100%); /* Chrome10+,Safari5.1+ */
+}
+
+#snapshot_container img {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -400px;
+	margin-top: -300px;
+	-webkit-transform: scaleX(-1);
+}
+
+#image_buttons_container {
+	position: absolute;
+	left: 50%;
+	font-weight: bold;
+	top: 50%;
+	margin-left: -125px;
+	margin-top: 300px;
+}
+
+#download_button {
+	text-align: center;
+	height: 20px;
+	cursor: pointer;
+	font-weight: bold;
+	float: left;
+}
+
+#close_button {
+	text-align: center;
+	height: 20px;
+	cursor: pointer;
+	font-weight: bold;
+	float: left;
+}
+
+footer {
+	height: 30px;
+	/*background-color: #CCC;*/
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+}
+
+footer .author {
+	float: right;
+	position: relative;
+	left: -50%;
+}
+
+footer .author_wrapper {
+	position: relative;
+	left: 50%;
+	font-weight: bold;
+}
