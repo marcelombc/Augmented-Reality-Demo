@@ -29,7 +29,7 @@
 		var createObjectURL = url.createObjectURL || url.createObjectURL;
 		if (!createObjectURL) throw new Error("URL.createObjectURL not found.");
 
-		__getUserMedia.call(this, "video",
+		__getUserMedia.call(this,
 			function(stream) {
 				this.video.src = createObjectURL(stream);
 			},
@@ -46,14 +46,14 @@
 	AugmentedReality.prototype.changeModel = function() {
 		this.mesh = null;
 		this.ARElement++;
-		if (this.ARElement > AugmentedReality.MAX_AR_ELEMENTS) this.ARElement = 1
+		if (this.ARElement > AugmentedReality.MAX_AR_ELEMENTS) this.ARElement = 1;
 		return this.ARElement;
-	}
+	};
 
 	AugmentedReality.prototype.goFullscreen = function() {
 		var elem = document.getElementsByTagName("canvas")[0];
 		elem.webkitRequestFullScreen();
-	}
+	};
 
 	/**
 	 * Create webgl renderer
@@ -92,21 +92,21 @@
 		this.video.autoplay = true;
 	}
 
-	function __getUserMedia(t, onsuccess, onerror) {
+	function __getUserMedia(onsuccess, onerror) {
 		onsuccess = onsuccess.bind(this);
 		onerror = onerror.bind(this);
 		if (navigator.getUserMedia) {
-			return navigator.getUserMedia(t, onsuccess, onerror);
-		} 
+			return navigator.getUserMedia({video:true, audio:false}, onsuccess, onerror);
+		}
 		else if (navigator.webkitGetUserMedia) {
-			return navigator.webkitGetUserMedia(t, onsuccess, onerror);
-		} 
+			return navigator.webkitGetUserMedia({video:true, audio:false}, onsuccess, onerror);
+		}
 		else if (navigator.mozGetUserMedia) {
-			return navigator.mozGetUserMedia(t, onsuccess, onerror);
-		} 
+			return navigator.mozGetUserMedia({video:true, audio:false}, onsuccess, onerror);
+		}
 		else if (navigator.msGetUserMedia) {
-			return navigator.msGetUserMedia(t, onsuccess, onerror);
-		} 
+			return navigator.msGetUserMedia({video:true, audio:false}, onsuccess, onerror);
+		}
 		else {
 			onerror(new Error("No getUserMedia implementation found."));
 		}
@@ -175,14 +175,14 @@
 				material = new THREE.MeshBasicMaterial({ map: texture });
 
 				loader = new THREE.BinaryLoader();
-				loader.load("assets/models/frog/frog_bin.js", function(geometry) { __createMesh.call(this, geometry, material, marker.object3d) }.bind(this));
+				loader.load("assets/models/frog/frog_bin.js", function(geometry) { __createMesh.call(this, geometry, material, marker.object3d); }.bind(this));
 				break;
 			case 2:
 				texture = THREE.ImageUtils.loadTexture("assets/img/textures/bird.jpg");
 				material = new THREE.MeshBasicMaterial({ map: texture, morphTargets: true });
 
 				loader = new THREE.JSONLoader();
-				loader.load("assets/models/bird/bird.js", function(geometry) { __createMesh.call(this, geometry, material, marker.object3d) }.bind(this));
+				loader.load("assets/models/bird/bird.js", function(geometry) { __createMesh.call(this, geometry, material, marker.object3d); }.bind(this));
 				break;
 			case 3:
 				mesh = new THREE.Mesh(new THREE.SphereGeometry(3000, 60, 40), new THREE.MeshBasicMaterial({ map: THREE.ImageUtils.loadTexture("assets/img/panoramas/panorama1.jpg") }));
@@ -205,7 +205,7 @@
 				material = new THREE.MeshBasicMaterial({ map: texture });
 
 				loader = new THREE.BinaryLoader();
-				loader.load("assets/models/head/head_bin.js", function(geometry) { __createMesh.call(this, geometry, material, marker.object3d) }.bind(this));
+				loader.load("assets/models/head/head_bin.js", function(geometry) { __createMesh.call(this, geometry, material, marker.object3d); }.bind(this));
 				break;
 		}
 	}
@@ -297,7 +297,7 @@
 			return AugmentedReality;
 		});
 	} else {
-	    glob.AugmentedReality = AugmentedReality;
+		glob.AugmentedReality = AugmentedReality;
 	}
 
 }(window));
